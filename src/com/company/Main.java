@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-      // String humburger = stats(11, 15);
-      //  System.out.println(humburger);
+    
         System.out.println(stats(11,20));
         System.out.println(stats(32,-10));
         System.out.println(stats(29,-5));
