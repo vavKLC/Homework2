@@ -11,7 +11,12 @@ public class Main {
         System.out.println(stats(32,-10));
         System.out.println(stats(29,-5));
         System.out.println(stats(47,23));
-        System.out.println(stats(9,7));
+        System.out.println(stats(9,7)); 
+        if (generateRandomAge() > 15 && generateRandomAge() < 50) {
+            System.out.printlpublicn("можно идти нулять");
+        }else {
+            System.out.println("нельзя");
+        }
     }
 
     public static String stats(int humanAge, int temperature) {
@@ -24,6 +29,10 @@ public class Main {
         } else {
             return "оставайтесь дома";
         }
+    }
+    public static int generateRandomAge() {
+        Random random = new Random();
+        return random.nextInt((100 - 1) + 1);
     }
 
 }
