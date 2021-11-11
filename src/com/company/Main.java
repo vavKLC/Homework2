@@ -1,6 +1,6 @@
 package com.company;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
@@ -12,7 +12,18 @@ public class Main {
         System.out.println(stats(29,-5));
         System.out.println(stats(47,23));
         System.out.println(stats(9,7));
+        if (generateRandomAge() > 15 && generateRandomAge() < 50) {
+            System.out.println("можно идти нулять");
+        }else {
+            System.out.println("нельзя");
+        }
+
     }
+
+
+
+
+
 
     public static String stats(int humanAge, int temperature) {
         if (humanAge >= 20 && humanAge <= 45 && temperature >= -20 && temperature <= 30) {
@@ -24,8 +35,16 @@ public class Main {
         } else {
             return "оставайтесь дома";
         }
+
+       }
+
+
+    public static int generateRandomAge() {
+        Random random = new Random();
+        return random.nextInt((100 - 1) + 1);
     }
 
 }
+
 
 
